@@ -30,6 +30,7 @@ export default () => (
     `}
     render={(data: IData) => {
       const posts = data?.wpgraphql?.posts?.nodes
+
       return (
         <Layout>
           <SEO title="Homepage" />
