@@ -1,7 +1,3 @@
 @import url('http://wordpress-api-shop.loc/wp-includes/css/dist/block-library/style.min.css?ver=5.5');
 @import "tailwindcss/base";
 @import "tailwindcss/utilities";
-
-h1 {
-  font-size: 40px;
-}

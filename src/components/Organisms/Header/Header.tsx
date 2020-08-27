@@ -1,4 +1,4 @@
 import React from 'react'
-import Menu from 'src/components/molecules/Menu'
+import MainMenu from 'src/containers/MainMenu'
 
-export default () => <Menu />
+export default () => <MainMenu />

@@ -1,48 +1,28 @@
 import React from 'react'
 import 'src/styles/modules/_menu.scss'
-import { StaticQuery, graphql, Link } from 'gatsby'
-import { IMenu } from 'src/types/IMenu'
+import { Link } from 'gatsby'
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        wpgraphql {
-          menu(id: 2, idType: DATABASE_ID) {
-            name
-            id
-            menuItems {
-              nodes {
-                id
-                label
-                path
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={({ wpgraphql }: IMenu) => {
-      const { nodes } = wpgraphql?.menu?.menuItems
+interface Iitem {
+  id: number
+  path: string
+  label: string
+}
 
-      return (
-        nodes && (
-          <nav className="main-navigation bg-blue-500">
-            <ul className="flex p-5">
-              {nodes.map(node => (
-                <li key={node.id}>
-                  <Link
-                    className="p-3 text-white hover:text-blue-900"
-                    to={node.path}
-                  >
-                    {node.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )
-      )
-    }}
-  ></StaticQuery>
-)
+interface IItems {
+  items: [Iitem]
+}
+
+export default ({ items }: IItems) =>
+  items && (
+    <nav className="main-navigation bg-blue-500">
+      <ul className="flex p-5">
+        {items.map((item: Iitem) => (
+          <li key={item.id}>
+            <Link className="p-3 text-white hover:text-blue-900" to={item.path}>
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
