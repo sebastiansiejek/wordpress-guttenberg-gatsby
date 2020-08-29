@@ -1,5 +1,4 @@
 import React from 'react'
-import 'src/styles/modules/_menu.scss'
 import { Link } from 'gatsby'
 
 interface Iitem {

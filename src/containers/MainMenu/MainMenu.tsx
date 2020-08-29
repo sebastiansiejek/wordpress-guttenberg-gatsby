@@ -1,5 +1,4 @@
 import React from 'react'
-import 'src/styles/modules/_menu.scss'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { IMenu } from 'src/types/IMenu'
 import Menu from 'src/components/molecules/Menu'
