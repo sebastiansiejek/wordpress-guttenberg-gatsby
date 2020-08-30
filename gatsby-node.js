@@ -20,11 +20,26 @@ query {
         id
         title
         slug
+        excerpt
       }
     }
   }
 }
 `
+// query MyQuery {
+//   posts {
+//     nodes {
+//       blocks {
+//         name
+//         saveContent
+//         innerBlocks {
+//           name
+//           saveContent
+//         }
+//       }
+//     }
+//   }
+// }
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
