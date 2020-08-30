@@ -1,5 +1,6 @@
 import React from 'react'
 import { IPostsLoop } from 'src/types/IPost'
+import { Link } from 'gatsby'
 
 export default ({ posts }: IPostsLoop) => (
   <div>
@@ -12,6 +13,7 @@ export default ({ posts }: IPostsLoop) => (
               __html: post.content,
             }}
           ></div>
+          <Link to={`/post/${post.slug}`}>Czytaj więcej</Link>
         </div>
       ))}
   </div>
