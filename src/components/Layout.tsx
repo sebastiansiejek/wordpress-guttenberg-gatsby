@@ -26,10 +26,9 @@ const Layout = ({ children }) => {
       <Header />
       <div className="my-10 mx-auto max-w-6xl">
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer className="mt-10 text-center">
+          © {new Date().getFullYear()}{' '}
+          <a href="https://sebastiansiejek.dev">Sebastian Siejek</a>
         </footer>
       </div>
     </>
