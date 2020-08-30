@@ -8,11 +8,7 @@ export default ({ posts }: IPostsLoop) => (
       posts.map(post => (
         <div key={post.id}>
           <h2>{post.title}</h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: post.content,
-            }}
-          ></div>
+          <div>{post.excerpt}</div>
           <Link to={`/post/${post.slug}`}>Czytaj więcej</Link>
         </div>
       ))}

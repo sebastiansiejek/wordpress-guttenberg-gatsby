@@ -3,6 +3,7 @@ export interface IPostLoop {
   id: string
   title: string
   slug: string
+  excerpt: string
 }
 
 export interface IPostsLoop {
